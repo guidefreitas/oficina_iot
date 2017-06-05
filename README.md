@@ -16,6 +16,10 @@ Códigos da atividade de Internet das coisas utilizando ESP8266
 - ArduinoJson - [https://github.com/bblanchon/ArduinoJson](https://github.com/bblanchon/ArduinoJson)
 - Esp8266 Oled SSD1306 - [https://github.com/squix78/esp8266-oled-ssd1306](https://github.com/squix78/esp8266-oled-ssd1306)
 
+# Esquema elétrico
+
+![](schematics/schema_oficina_iot.jpg)
+
 # Funcionamento
 
 Este código envia as informações do sensor para o serviço Adafruit.io ([http://adafruit.io](http://adafruit.io)). Com os dados no serviço é possível configurar o aplicativo IFTTT ([https://ifttt.com](https://ifttt.com)) para enviar notificações, armazenar os dados ou realizar diferentes ações.

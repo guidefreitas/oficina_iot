@@ -15,7 +15,7 @@
 #define SCK_PIN D1
 #define PIN_LED D8
 #define DHTTYPE DHT22
-#define DHTPIN  12
+#define DHTPIN  D6
 
 String ADAFRUIT_USERNAME = "<USUARIO ADAFRUIT>";
 String ADAFRUIT_AIO = "<AIO ADAFRUIT>";
