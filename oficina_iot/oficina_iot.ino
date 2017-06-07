@@ -6,9 +6,10 @@
 #include <SPI.h>
 #include <Wire.h>
 #include <SSD1306Wire.h>
+#include <math.h>
 
-#define WIFI_SSID "<NOME REDE>"
-#define WIFI_PASSWORD "<SENHA REDE>"
+#define WIFI_SSID "<NOME DA REDE>"
+#define WIFI_PASSWORD "<SENHA DA REDE>"
 
 #define I2C_DISPLAY_ADDRESS 0x3c
 #define SDA_PIN D2
@@ -17,8 +18,8 @@
 #define DHTTYPE DHT22
 #define DHTPIN  D6
 
-String ADAFRUIT_USERNAME = "<USUARIO ADAFRUIT>";
-String ADAFRUIT_AIO = "<AIO ADAFRUIT>";
+String ADAFRUIT_USERNAME = "<USUARIO DO ADAFRUIT>";
+String ADAFRUIT_AIO = "<AIO DO ADAFRUIT>";
 String FEED_KEY_TEMPERATURA = "temperatura";
 String FEED_KEY_UMIDADE = "umidade";
 String FEED_KEY_LED = "led";
@@ -190,6 +191,12 @@ void loop() {
   long tempo = millis();
   float umidade = dht.readHumidity();
   float temperatura = dht.readTemperature(false);
+
+  if(isnan(umidade) != 0 || isnan(temperatura) != 0){
+    delay(1000);
+    return;
+  }
+
   mostraDadosDisplay(umidade, temperatura);
 
   if((tempo - tpTemperatura) > tempoEnvioTemperatura){
