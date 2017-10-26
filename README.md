@@ -12,6 +12,9 @@ Códigos da atividade de Internet das coisas utilizando ESP8266
 
 # Bibliotecas necessárias
 
+Adicione o suporte a ESP8266 no Arduino.
+Preferences -> Additional Boards Manager URLs: http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
 - Adafruit DHT Sensor - [https://github.com/adafruit/DHT-sensor-library](https://github.com/adafruit/DHT-sensor-library)
 - ArduinoJson - [https://github.com/bblanchon/ArduinoJson](https://github.com/bblanchon/ArduinoJson)
 - Esp8266 Oled SSD1306 - [https://github.com/squix78/esp8266-oled-ssd1306](https://github.com/squix78/esp8266-oled-ssd1306)
